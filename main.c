@@ -1,6 +1,6 @@
 /*
  * main.c
- * CS 375 — chess
+ * chess
  *
  * Author: Kevin Tieu
  *
@@ -17,13 +17,31 @@
 #include <string.h>
 
 /*
- * main
- * Print the program name. Later days grow this function.
+ * print_usage
+ * Tell the user how to start the program.
  *
- * return 0 when the program finishes
+ * program_name - usually argument_list[0]
  */
-int main(void)
+static void print_usage(const char *program_name)
 {
+    printf("usage: %s\n", program_name);
+}
+
+/*
+ * main
+ * Read optional flags, then start the game.
+ *
+ * argument_count - number of command-line words
+ * argument_list  - those words; argument_list[0] is the program name
+ * return 0 after a normal game, 1 if the flags were wrong
+ */
+int main(int argument_count, char *argument_list[])
+{
+    if (argument_count > 1 && strcmp(argument_list[1], "-h") == 0) {
+        print_usage(argument_list[0]);
+        return 0;
+    }
     printf("chess\n");
+    print_usage(argument_list[0]);
     return 0;
 }

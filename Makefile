@@ -1,6 +1,5 @@
 # chess
 # Author: Kevin Tieu
-# CS 375
 #
 # Build the program in this folder.
 #   make
@@ -17,3 +16,4 @@ $(BIN): main.c
 
 clean:
 	rm -f $(BIN)
+
