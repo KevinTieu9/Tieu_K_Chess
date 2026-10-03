@@ -17,4 +17,8 @@
 #define PATH_BUFFER_SIZE 256    /* save / load file names */
 #define LINE_BUFFER_SIZE 128    /* one typed command */
 
-#endif/
+typedef struct {
+    char squares[BOARD_SIZE][BOARD_SIZE]; /* [rank][file], rank 0 is rank 1 */
+} Board;
+
+#endif

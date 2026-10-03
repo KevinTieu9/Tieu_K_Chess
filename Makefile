@@ -11,9 +11,8 @@ BIN = chess
 
 all: $(BIN)
 
-$(BIN): main.c
-	$(CC) $(CFLAGS) -o $(BIN) main.c
+$(BIN): main.c board.c
+	$(CC) $(CFLAGS) -o $(BIN) main.c board.c
 
 clean:
 	rm -f $(BIN)
-

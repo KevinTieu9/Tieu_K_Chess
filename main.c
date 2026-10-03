@@ -12,6 +12,7 @@
  */
 
 #include "chess.h"
+#include "board.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -37,11 +38,10 @@ static void print_usage(const char *program_name)
  */
 int main(int argument_count, char *argument_list[])
 {
-    if (argument_count > 1 && strcmp(argument_list[1], "-h") == 0) {
-        print_usage(argument_list[0]);
-        return 0;
-    }
+    Board board;
+    (void)argument_count;
+    (void)argument_list;
+    clear_board(&board);
     printf("chess\n");
-    print_usage(argument_list[0]);
     return 0;
 }
