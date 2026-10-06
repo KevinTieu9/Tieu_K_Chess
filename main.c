@@ -41,7 +41,7 @@ int main(int argument_count, char *argument_list[])
     Board board;
     (void)argument_count;
     (void)argument_list;
-    clear_board(&board);
+    setup_start_position(&board);
     printf("chess\n");
     return 0;
 }

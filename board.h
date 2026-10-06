@@ -21,5 +21,13 @@
  * board - the position we are about to use
  */
 void clear_board(Board *board);
+/*
+ * setup_start_position
+ * Put the standard chess pieces on the board.
+ * Rank 1 and 2 are White. Rank 7 and 8 are Black.
+ *
+ * board - filled in with the starting position
+ */
+void setup_start_position(Board *board);
 
 #endif
